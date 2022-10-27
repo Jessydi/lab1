@@ -9,7 +9,7 @@ class Storage
 	__clone()
 	{
 	}
-	private function __wakeup()
+	public  function __wakeup()
 	{
 		throw new \Exception("Cannot unserialize a singleton");
 	}
@@ -21,7 +21,8 @@ class Storage
 		}
 		return self::$instances[$cls];
 	}
-	public function connectToStorage($key){
-		echo "connected with", $key;
+	public function connectToStorage($key)
+	{
+		echo "connected with ", $key;
 	}
 }

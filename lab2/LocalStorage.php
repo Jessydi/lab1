@@ -1,7 +1,8 @@
 <?php
+require_once('Storage.php');
 class LocalStorage extends Storage
 {
-	public function localStorageFunc()
+	public static function localStorageFunc()
 	{
 		echo "something from local storage";
 	}
